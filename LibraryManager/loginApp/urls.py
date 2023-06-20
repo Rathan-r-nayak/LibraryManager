@@ -6,4 +6,5 @@ urlpatterns=[
     path("",views.welcomePage),
     path("signin/",views.signinPage),
     path("signup/",views.signupPage),
+    path("filldb/",views.filldb)
 ]
