@@ -1,7 +1,7 @@
-{% extends 'main.html' %}
+<!--{% extends 'main.html' %}
 
 
-<!-- css here -->
+
 <style>
 {%block style%}
 
@@ -9,7 +9,7 @@
 </style>
 
 
-<!-- main here -->
+
 <body>
 {%block body%}
 <h1>admin page to add the different books</h1>
@@ -17,16 +17,13 @@
 </body>
 
 
-<!-- script here -->
+
 <script>
 {%block script%}
 
 {%endblock script%}
 </script>
-
-
-
-{% extends 'main.html' %}
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -38,16 +35,13 @@
 
 <!-- css here -->
 <style>
-{%block style%}
-
-{%endblock style%}
-.get-in-touch {
+.Information{
   max-width: 800px;
   margin: 50px auto;
   position: relative;
 
 }
-.get-in-touch .title {
+.Information .title {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -118,9 +112,11 @@
 </head>
 <!-- main here -->
 <body>
-    <section class="get-in-touch">
+    <section class="Information">
+      <!--create form action to another page to pass information-->
         <h1 class="title">Enter the Book Information</h1>
        <h4>Publisher Information</h4>
+       
         <form class="contact-form row">
            <div class="form-field col-lg-6">
               <input id="name" class="input-text js-input" type="text" required>
@@ -210,7 +206,5 @@
 
 <!-- script here -->
 <script>
-{%block script%}
 
-{%endblock script%}
 </script>
