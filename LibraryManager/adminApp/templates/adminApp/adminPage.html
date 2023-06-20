@@ -1,7 +1,37 @@
+<!--{% extends 'main.html' %}
+
+
+
+<!-- css here -->
+<style>
+{%block style%}
+
+{%endblock style%}
+</style>
+
+
+<!-- main here -->
+<body>
+{%block body%}
+<h1>admin page to add the different books</h1>
+{%endblock body%}
+</body>
+
+
+<!-- script here -->
+<script>
+{%block script%}
+
+{%endblock script%}
+</script>
+
+
+
 {% extends 'main.html' %}
-
-
-{%block links%}
+<!DOCTYPE html>
+<html>
+  <head>
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {%endblock links%}
@@ -12,13 +42,15 @@
 <!-- css here -->
 <style>
 {%block style%}
+
+{%endblock style%}
 .get-in-touch {
   max-width: 800px;
   margin: 50px auto;
   position: relative;
 
 }
-.get-in-touch .title {
+.Information .title {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -89,100 +121,96 @@
 
 <!-- main here -->
 <body>
-{%block body%}
-   <section class="get-in-touch">
-       <h1 class="title">Enter the Book Information</h1>
-      <h4>Publisher Information</h4>
-       <form class="contact-form row">
-          <div class="form-field col-lg-6">
-             <input id="name" class="input-text js-input" type="text" required>
-             <label class="label" for="name">Name</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="pubaddress" class="input-text js-input" type="text" required>
-             <label class="label" for="pubaddress">Address</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="phone" class="input-text js-input" type="text" required>
-             <label class="label" for="phone">Phone Number</label>
-          </div>
-      </form>
-         
-      <h4>Book Information</h4>
-      <form class="contact-form row">
-      <div class="form-field col-lg-6">
-             <input id="BookId" class="input-text js-input" type="text" required>
-             <label class="label" for="BookId">BookId</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="title" class="input-text js-input" type="text" required>
-             <label class="label" for="title">Title</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="PublisherName" class="input-text js-input" type="text" required>
-             <label class="label" for="PublisherName">Publisher Name</label>
-          </div>
-        <div class="form-field col-lg-6 ">
-             <input id="PublisherYear" class="input-text js-input" type="text" required>
-             <label class="label" for="PublisherYear">Publisher Year</label>
-          </div>
-      </form>
-      <h4>Author Information</h4>
-       <form class="contact-form row">
-          <div class="form-field col-lg-6">
-             <input id="AuthorName" class="input-text js-input" type="text" required>
-             <label class="label" for="AuthorName">AuthorName</label>
-          </div>
-      </form>
-      <h4>Library Details</h4>
-       <form class="contact-form row">
-          <div class="form-field col-lg-6">
-             <input id="ProgrammeId" class="input-text js-input" type="text" required>
-             <label class="label" for="ProgrammeId">ProgrammeId</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="ProgrammeName" class="input-text js-input" type="text" required>
-             <label class="label" for="ProgrammeName">Programme Name</label>
-          </div>
-          <div class="form-field col-lg-6 ">
-             <input id="LibraryAddress" class="input-text js-input" type="text" required>
-             <label class="label" for="LibraryAddress">Library Address</label>
-          </div>
-      </form>
-      <h4>Book Copies</h4>
-       <form class="contact-form row">
-          <div class="form-field col-lg-6">
-             <input id="No_of_copies" class="input-text js-input" type="text" required>
-             <label class="label" for="No_of_copies">No Of Copies</label>
-          </div>
-          
-      </form>
-      <form class="contact-form row">
-        
-          <div class="form-field col-lg-12">
-            <label for="coverpage">Upload the cover(front) page of the book:</label>
-      <input type="file" id="coverpage" name="coverpage"><br><br>
-            </form>
+    <section class="get-in-touch">
+        <h1 class="title">Enter the Book Information</h1>
+       <h4>Publisher Information</h4>
         <form class="contact-form row">
-        
-          <div class="form-field col-lg-12">
-            <label for="summary">Upload the summary page of the book:</label>
-      <input type="file" id="summary" name="summary"><br><br>
-            </form>
-      <form class="contact-form row">
-        
-          <div class="form-field col-lg-12">
-             <input class="submit-btn" type="submit" value="Submit">
-          </div>
+           <div class="form-field col-lg-6">
+              <input id="name" class="input-text js-input" type="text" required>
+              <label class="label" for="name">Name</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="pubaddress" class="input-text js-input" type="text" required>
+              <label class="label" for="pubaddress">Address</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="phone" class="input-text js-input" type="text" required>
+              <label class="label" for="phone">Phone Number</label>
+           </div>
        </form>
-    </section>
-    {%endblock body%}
+          
+       <h4>Book Information</h4>
+       <form class="contact-form row">
+       <div class="form-field col-lg-6">
+              <input id="BookId" class="input-text js-input" type="text" required>
+              <label class="label" for="BookId">BookId</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="title" class="input-text js-input" type="text" required>
+              <label class="label" for="title">Title</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="PublisherName" class="input-text js-input" type="text" required>
+              <label class="label" for="PublisherName">Publisher Name</label>
+           </div>
+         <div class="form-field col-lg-6 ">
+              <input id="PublisherYear" class="input-text js-input" type="text" required>
+              <label class="label" for="PublisherYear">Publisher Year</label>
+           </div>
+       </form>
+       <h4>Author Information</h4>
+        <form class="contact-form row">
+           <div class="form-field col-lg-6">
+              <input id="AuthorName" class="input-text js-input" type="text" required>
+              <label class="label" for="AuthorName">AuthorName</label>
+           </div>
+       </form>
+       <h4>Library Details</h4>
+        <form class="contact-form row">
+           <div class="form-field col-lg-6">
+              <input id="ProgrammeId" class="input-text js-input" type="text" required>
+              <label class="label" for="ProgrammeId">ProgrammeId</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="ProgrammeName" class="input-text js-input" type="text" required>
+              <label class="label" for="ProgrammeName">Programme Name</label>
+           </div>
+           <div class="form-field col-lg-6 ">
+              <input id="LibraryAddress" class="input-text js-input" type="text" required>
+              <label class="label" for="LibraryAddress">Library Address</label>
+           </div>
+       </form>
+       <h4>Book Copies</h4>
+        <form class="contact-form row">
+           <div class="form-field col-lg-6">
+              <input id="No_of_copies" class="input-text js-input" type="text" required>
+              <label class="label" for="No_of_copies">No Of Copies</label>
+           </div>
+           
+       </form>
+       <form class="contact-form row">
+         
+           <div class="form-field col-lg-12">
+             <label for="coverpage">Upload the cover(front) page of the book:</label>
+       <input type="file" id="coverpage" name="coverpage"><br><br>
+             </form>
+         <form class="contact-form row">
+         
+           <div class="form-field col-lg-12">
+             <label for="summary">Upload the summary page of the book:</label>
+       <input type="file" id="summary" name="summary"><br><br>
+             </form>
+       <form class="contact-form row">
+         
+           <div class="form-field col-lg-12">
+              <input class="submit-btn" type="submit" value="Submit">
+           </div>
+        </form>
+     </section>
 </body>
 
 
 <!-- script here -->
 <script>
-{%block script%}
 
-{%endblock script%}
 </script>
