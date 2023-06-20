@@ -42,20 +42,6 @@
         font-weight: bold;
     }
 
-    nav a {
-        position: relative;
-        text-decoration: none;
-        color: white;
-        margin: 0px 20px;
-        padding: 2px 15px;
-        border-bottom: 2px solid transparent;
-        transition: 0.25 ease-in-out;
-    }
-
-    nav a:hover {
-        border-bottom: 2px solid rgb(255, 255, 255);
-        transition: 0.25 ease-in-out;
-    }
     nav .btn-pop{
         width: 130px;
         height: 50px;
@@ -102,6 +88,7 @@
         overflow: hidden;
         transition: height .2s ease;
         transform: scale(0);
+        color: white;
     }
     .wrapper.active {
         height: 490px;
@@ -239,7 +226,7 @@
         <img src="/static/logo.png" height="30px" alt="logo" />
       </div>
         <nav id="navbar" class="navbar">
-            <button class="btn-pop">Sign IN</button>
+            <button class="btn-pop">Sign-IN</button>
             <button class="btnr-pop">Sign-UP</button>
         </nav>
     </header>
@@ -299,7 +286,7 @@
 
 <!-- script here -->
 <script>
-    {%block script%}
+
 
     const wrapper = document.querySelector(".wrapper");
     const loginlink = document.querySelector(".login-link");
@@ -327,5 +314,5 @@
         wrapper.classList.add('activer-popup')
         wrapper.classList.add('active')
     });
-    {%endblock script%}
+
 </script>
