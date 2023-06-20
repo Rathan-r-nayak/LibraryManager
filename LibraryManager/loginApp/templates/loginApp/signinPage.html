@@ -21,8 +21,6 @@
           align-items: center;
           justify-content: center;
           min-height: 100vh;
-          /* background: url("images/trnava-university-BEEyeib-am8-unsplash.jpg") no-repeat; */
-          /* background-color: #3b576d; */
           background: url("/static/bck.png");
           background-size: cover;
           background-position: center;
@@ -74,7 +72,7 @@
           align-items: center;
           overflow: hidden;
           transition: height .2s ease;
-          transform: scale(0);
+          transform: scale(1);
       }
       .wrapper.active {
           height: 490px;
@@ -203,14 +201,8 @@
       <div class="logo">
         <img src="/static/logo.png" height="30px" alt="logo" />
       </div>
-      <nav id="navbar" class="navbar">
-        <button class="btn-pop">Login</button>
-      </nav>
     </header>
     <div class="wrapper">
-      <span class="btn-close icon-close"
-        ><ion-icon name="close-outline"></ion-icon
-      ></span>
       <div class="form-box login">
         <h2>LOGIN</h2>
         <form action="#">
@@ -286,29 +278,18 @@
     {%block script%}
 
 
-    const wrapper = document.querySelector(".wrapper");
-    const loginlink = document.querySelector(".login-link");
-    const registerlink = document.querySelector(".register-link");
-    const btnpop = document.querySelector(".btn-pop");
-    const btnclose = document.querySelector(".btn-close");
+        const wrapper = document.querySelector(".wrapper");
+        const loginlink = document.querySelector(".login-link");
+        const registerlink = document.querySelector(".register-link");
 
 
 
-    registerlink.addEventListener('click', () => {
-        wrapper.classList.add('active')
-    });
-    loginlink.addEventListener('click', () => {
-        wrapper.classList.remove('active')
-    });
-    btnpop.addEventListener('click', () => {
-        wrapper.classList.add('active-popup')
-    });
-    btnclose.addEventListener('click', () => {
-        wrapper.classList.remove('active-popup')
-    });
-
-
-
-    {%endblock script%}
+        registerlink.addEventListener('click', () => {
+            wrapper.classList.add('active')
+        });
+        loginlink.addEventListener('click', () => {
+            wrapper.classList.remove('active')
+        });
+        {%endblock script%}
   </script>
 </html>

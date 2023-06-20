@@ -78,7 +78,7 @@
           align-items: center;
           overflow: hidden;
           transition: height .2s ease;
-          transform: scale(0);
+          transform: scale(1);
       }
       .wrapper.active {
           height: 440px;
@@ -207,14 +207,8 @@
       <div class="logo">
         <img src="/static/logo.png" height="30px" alt="logo" />
       </div>
-      <nav id="navbar" class="navbar">
-        <button class="btn-pop">Sign up</button>
-      </nav>
     </header>
     <div class="wrapper">
-      <span class="btn-close icon-close"
-        ><ion-icon name="close-outline"></ion-icon
-      ></span>
       <div class="form-box register">
         <h2>LOGIN</h2>
         <form action="#">
@@ -287,30 +281,21 @@
   </body>
 
   <script>
-
-
-    const wrapper = document.querySelector(".wrapper");
-    const loginlink = document.querySelector(".login-link");
-    const registerlink = document.querySelector(".register-link");
-    const btnpop = document.querySelector(".btn-pop");
-    const btnclose = document.querySelector(".btn-close");
-
-
     {%block script%}
-    registerlink.addEventListener('click', () => {
-        wrapper.classList.remove('active')
-    });
-    loginlink.addEventListener('click', () => {
-        wrapper.classList.add('active')
-    });
-    btnpop.addEventListener('click', () => {
-        wrapper.classList.add('active-popup')
-    });
-    btnclose.addEventListener('click', () => {
-        wrapper.classList.remove('active-popup')
-    });
-    {%endblock script%}
+
+        const wrapper = document.querySelector(".wrapper");
+        const loginlink = document.querySelector(".login-link");
+        const registerlink = document.querySelector(".register-link");
+        const btnpop = document.querySelector(".btn-pop");
+        const btnclose = document.querySelector(".btn-close");
 
 
+        registerlink.addEventListener('click', () => {
+            wrapper.classList.remove('active')
+        });
+        loginlink.addEventListener('click', () => {
+            wrapper.classList.add('active')
+        });
+        {%endblock script%}
   </script>
 </html>
