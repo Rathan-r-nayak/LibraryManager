@@ -30,7 +30,7 @@ def signinInput(request):
         if user is not None:
             login(request,user)
             messages.success(request,f"successfully logged in as {user}")
-            return redirect('main')
+            return HttpResponseRedirect('/studentapp/')
         else:
             messages.error(request,f"failed to login")
             return redirect('main')
@@ -67,7 +67,7 @@ def signupInput(request):
         user=models.User(uid=u,card_num=cardnum,total_issued=0)
         user.save()
         login(request,u)
-        return redirect('main')
+        return HttpResponseRedirect('/studentapp/')
     return HttpResponse("404-Not Found")
 
 

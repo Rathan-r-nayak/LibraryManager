@@ -1,0 +1,114 @@
+{% extends 'main.html' %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%block links%}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {%endblock links%}
+    <style>
+        {%block style%}
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:monospace;
+}
+body{
+    height:100vh;
+    /* background-color: red; */
+    background:url('/static/bluebck.jpg');
+    background-size: cover;
+    background-position: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+    font-size:1rem;
+}
+a:hover{
+    color: orange;
+}
+/* Header */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width:100%;
+    height: 60px;
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.search-form {
+    display: flex;
+  }
+  
+  .search-form input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    width:25em;
+  }
+  
+  .search-form button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color:brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+.navbar .logo{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+        {%endblock style%}
+    </style>
+</head>
+<body>
+    {%block body%}
+    <header>
+        <div class="navbar">
+          <div class="logo"><img src="/static/logo.png" height="35px" alt="logo" /></div>
+          <form class="search-form" method="get">
+              <input type="text" placeholder="">
+              <button type="submit">Search</button>
+          </form>
+          <ul class="links">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Service">Services</a></li>
+            <li><a href="#Contact">Contact Us</a></li>
+          </ul>
+        </div>
+    </header>
+    {%endblock body %}
+</body>
+<script>
+    {%block script%}
+    {%endblock script%}
+
+</script>
+</html>
