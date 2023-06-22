@@ -81,20 +81,20 @@ def signupInput(request):
 
 
 
-import pandas as pd
-import numpy as np
-import csv
-def filldb(request):
-    file = open("static/database_values.csv")
-    # csvreader = csv.reader(file)
-    df=pd.read_csv(file)
-    for i in df.values:
-        bid=i[0]
-        title=i[1]
-        author=i[2]
-        year=i[3]
-        summary=i[4]
-        copies=i[5]
-        book=models.Book(book_id=bid,title=title,pub_year=year,author=author,copies=copies,summary=summary)
-        book.save()
-    return HttpResponse("added values to database")
+# import pandas as pd
+# import numpy as np
+# import csv
+# def filldb(request):
+#     file = open("static/database_values.csv")
+#     # csvreader = csv.reader(file)
+#     df=pd.read_csv(file)
+#     for i in df.values:
+#         bid=i[0]
+#         title=i[1]
+#         author=i[2]
+#         year=i[3]
+#         summary=i[4]
+#         copies=i[5]
+#         book=models.Book(book_id=bid,title=title,pub_year=year,author=author,copies=copies,summary=summary)
+#         book.save()
+#     return HttpResponse("added values to database")

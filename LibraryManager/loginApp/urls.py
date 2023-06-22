@@ -10,5 +10,5 @@ urlpatterns=[
 
     # path("signup/",views.signupPage,name="signupPage"),
     path("signupInput",views.signupInput,name="singupInput"),
-    path("filldb/",views.filldb)
+    # path("filldb/",views.filldb)
 ]
