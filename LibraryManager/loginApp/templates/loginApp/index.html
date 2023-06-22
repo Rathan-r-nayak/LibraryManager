@@ -228,18 +228,22 @@
     </header>
     <div class="wrapper">
         <span class="btn-close icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+
+
         <div class="form-box login">
-            <h2>LOGIN</h2>
-            <form action="#">
+            <h2>SIGNIN</h2>
+            <form action="signinInput" method="post">
+                {% csrf_token %}
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
+                    <input type="text" name="uname" required>
+                    <label for="uname">USERNAME</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
+                    <input type="password" name="passwd" required>
+                    <label for="passwd">Password</label>
                 </div>
                 <div class="remember-forget">
                     <label><input type="checkbox">Remember me?</label><a href="#">Forgot Password</a>
@@ -250,30 +254,67 @@
                 </div>
             </form>
         </div>
+
+
+
         <div class="form-box register">
             <h2>SIGN UP</h2>
-                <form action="#">
+                <form action="signupInput" method="post">
+                    {% csrf_token %}
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                        <input type="text" required>
-                        <label>Username</label>
+                        <input type="text" name="uname" required>
+                        <label for="uname">Username</label>
                     </div>
+
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                        <input type="email" required>
-                        <label>Email</label>
+                        <input type="text" name="fname" required>
+                        <label for="fname">First Name</label>
                     </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="text" name="lname" required>
+                        <label for="lname">Last Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                        <input type="text" name="card_num" required>
+                        <label for="card_num">Card Number</label>
+                    </div>
+
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                        <input type="password" required>
-                        <label>Password</label>
+                        <input type="password" name="passwd" required>
+                        <label for="passwd">Password</label>
                     </div>
+
                         <button type="submit" class="btn">Register</button>
                         <div class="login-register">
                             <p>Already have an account <a href="#" class="login-link">Login now</a></p>
                         </div>
                 </form>
         </div>
+    </div>
+    <div class="msg">
+        {%for i in messages%}
+        <script type = "text/javascript">  
+        
+            function myfun()
+            {
+                alert("{{i}}")
+            }
+            myfun();
+        </script>
+        {%endfor%}
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -283,7 +324,7 @@
 
 <!-- script here -->
 <script>
-
+{%block script%}
 
     const wrapper = document.querySelector(".wrapper");
     const loginlink = document.querySelector(".login-link");
@@ -311,5 +352,5 @@
         wrapper.classList.add('activer-popup')
         wrapper.classList.add('active')
     });
-
+{%endblock script%}
 </script>
