@@ -3,6 +3,8 @@ from . import views
 
 
 urlpatterns=[
-    path("",views.adminLoginPage),
+    path("",views.adminLoginPage,name="adminLoginPage"),
+    path("adminSigninInput",views.adminSigninInput),
     path("adminPage/",views.adminPage),
+    path("bookInput",views.bookInput),
 ]

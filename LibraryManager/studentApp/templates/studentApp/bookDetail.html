@@ -1,0 +1,133 @@
+{% extends 'main.html' %}
+
+
+{%block font%}
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+{%endblock font%}
+
+<style>
+{%block style%}
+body{
+    font-family: 'Roboto';
+    background-color: #212A3E;
+}
+h2{
+    color: rgb(103, 100, 65);
+    font-weight: bolder;
+    font-size: 35px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 20px;
+    background-color: #9BA4B5;
+    border-radius: 20px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+}
+p,h4{
+    margin: 30px 20px;
+    
+}
+.subHead{
+    color: darkblue;
+    font-weight: bold;
+    font-size: 30px;
+}
+.details_scheme{
+    font-size: 20px;
+}
+.scheme_name{
+    font-size: 25px;
+    color: saddlebrown;
+}
+footer{
+    width: 100%;
+    height:100px;
+    background-color:#212A3E;
+    color: white;
+}
+.about{
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 3px 0;
+}
+.links{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+.copy{
+    text-align:center;
+}
+{%endblock style%}
+</style>
+
+
+{%block body%}
+<div class="content">
+    <div class="heading">
+        <h2>Title: {{book.title}}</h2>
+    </div>
+
+    
+    <div class="relSchemes">
+        <p class="subHead">Published Year</p>
+        <p class="details_scheme">{{book.pub_year}}</p>
+    </div>
+
+    <div class="relSchemes">
+        <p class="subHead">author</p>
+        <p class="details_scheme">{{book.author}}</p>
+    </div>
+    <div class="relSchemes">
+        <p class="subHead">copies</p>
+        <p class="details_scheme">{{book.copies}}</p>
+    </div>
+    <div class="relSchemes">
+        <p class="subHead">summary:  </p>
+        <p class="details_scheme">{{book.summary}}</p>
+    </div>
+    
+     
+     <!-- {%for i in benifit%}
+     {%if forloop.counter == 1%}
+     <p class="subHead">RELATED SCHEMES:</p>
+     {%endif%}
+    
+    </div>
+    {%endfor%} -->
+    
+
+    <div class="tocontact">
+        <p class="subHead">TO CONTACT:</p>
+        <p class="details_scheme">{{scheme.tocontact}}</p>
+    </div>
+</div>
+<footer>
+    <div class="about">
+    <div class="links">
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+        <a href="#">Privacy Policy</a>
+    </div>
+    <div class="links">
+        <a href="https://github.com/Rathan-r-nayak">Rathan Nayak</a>
+        <a href="https://github.com/Pradwin">Pradwin Sherigar</a>
+        <a href="https://github.com/Vijayakumarbiradar22">VijayKumar</a>
+    </div>
+</div>
+<div class="copy">
+    &#169 CopyRight
+</div>
+</footer>
+
+{%endblock body%}
